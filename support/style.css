@@ -1,0 +1,24 @@
+@blue: #fff;
+
+
+.contents {
+    padding: 10vh;
+    /* margin: 10vh; */
+    height: 100vh;
+    width: auto;
+    background-color: rgba(216, 121, 121, 0.897);
+    text-align: center;
+
+}
+
+
+
+.contents:hover {
+    background-color: black;
+}
+
+/* input {
+
+
+    padding-top: 10px;
+} */
