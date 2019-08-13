@@ -1,5 +1,34 @@
-.contents {
-    height: 100vh;
-    width: auto;
-    background-color: rgb(201, 119, 119);
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+.background {
+    font-family: 'Nunito', sans-serif;
+    height: 200px;
+    width: 400px;
+    background-color:#2c72c6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event {
+    color: white;
+    margin-right: 30px;
+}
+
+.cat {
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+}
+
+.dog {
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(70, 70, 202);
+    color: white;
+    background-color: rgb(63, 169, 218);
+    height: 40px;  
+    width: 65px;
 }
