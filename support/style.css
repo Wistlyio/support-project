@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @blue: #fff;
 
 
@@ -22,3 +23,10 @@
 
     padding-top: 10px;
 } */
+=======
+.contents {
+    height: 100vh;
+    width: auto;
+    background-color: rgb(201, 119, 119);
+}
+>>>>>>> master
