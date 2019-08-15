@@ -1,0 +1,17 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10vh;
+}
+
+.cat { 
+  margin-top: 24px;
+}
+
+.doggo {
+  border-radius: 50%;
+}
