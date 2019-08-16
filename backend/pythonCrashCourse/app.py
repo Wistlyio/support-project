@@ -71,12 +71,38 @@ car = {
 }
 print(car)
 
+house = {
+    "location" : "address",
+    "people" : "Stanley"
+}
+
+ticket = {
+    "subject" : "parking",
+    "time" : "2:09",
+    "person" : "Stanley",
+    "issuer" : "officer",
+    "location" : "parking lot"
+}
+
+support = {
+    "name" : "First and last",
+    "issue" : "problem",
+    "email" : "xyz@gmail.com",
+    "description" : "details"
+    "id" : "ticket number"
+}
+
 # Making a person class
 class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
+    def change_name(self, new_name):
+        self.name = new_name
+
 p1 = Person("Stanley", 18 )
 print(p1.name)
 print(p1.age)
+p1.change_name("William")
+print(p1.name)
