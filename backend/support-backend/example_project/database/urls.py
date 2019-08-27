@@ -6,3 +6,5 @@ urlpatterns ={
     url(r'^student/$', StudentView, name="student"),
     url(r'^student/(?P<pk>[0-9]+)/$', StudentDetailsView, name="student_details"),
 }
+
+urlpatterns = format_suffix_patterns(urlpatterns)
