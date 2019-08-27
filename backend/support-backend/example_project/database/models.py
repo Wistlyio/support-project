@@ -9,3 +9,6 @@ class Student(models.Model):
     age = models.IntegerField(null=True)
     date_created = models.DateTimeField(auto_now_add=True)
     email = models.TextField(null=True)
+
+    def __str__(self):
+      return "{}".format(self)
