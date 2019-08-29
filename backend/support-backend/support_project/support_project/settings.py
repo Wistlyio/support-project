@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework', 
     'support'
 ]
 
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'support_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'support',
         'USER':  'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',

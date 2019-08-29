@@ -26,6 +26,15 @@ class Ticket(models.Model) :
     def __str__(self) :
         return "{}".format(self)
 
+class Agent(models.Model) :
+    id = models.AutoField(primary_key = True, unique = True)
+    first_name = models.TextField()
+    last_name = models.TextField()
+    email = models.TextField()
+
+    def __str__(self) :
+        return "{}".format(self)
+
 # # If they're logged in
 # class Ticket2(models.Model) :
 #     id = models.AutoField(primary_key = True, unique = True)
