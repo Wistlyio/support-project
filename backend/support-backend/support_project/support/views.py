@@ -10,6 +10,14 @@ MASTERKEY = 'password'
 
 @api_view(['GET', 'POST'])
 def TicketView(request):
+
+    # check if key = MASTERKEY
+    if KeyCheck(key) == False :
+        messages = {
+            "msg" : "Key Invalid"
+        }
+        return Response(messages, status=status.HTTP_400_BAD_REQUEST)
+
     if request.method == 'GET':
         queryset = Ticket.objects.all()
         serializer = TicketSerializer(queryset, many=True)
@@ -50,6 +58,13 @@ def TicketDetailsView(request, pk, key):
 
 @api_view(['GET', 'POST'])
 def AgentView(request):
+# check if key = MASTERKEY
+    if KeyCheck(key) == False :
+        messages = {
+            "msg" : "Key Invalid"
+        }
+        return Response(messages, status=status.HTTP_400_BAD_REQUEST)
+
     if request.method == 'GET':
         queryset = Agent.objects.all()
         serializer = AgentSerializer(queryset, many=True)
@@ -63,6 +78,12 @@ def AgentView(request):
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def AgentDetailsView(request, pk):
+# check if key = MASTERKEY
+    if KeyCheck(key) == False :
+        messages = {
+            "msg" : "Key Invalid"
+        }
+        return Response(messages, status=status.HTTP_400_BAD_REQUEST)
 
     try:
         query = Agent.objects.get(pk=pk)
