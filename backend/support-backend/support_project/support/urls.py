@@ -16,7 +16,7 @@ from .views import AgentView, AgentDetailsView
 
 urlpatterns ={
     url(r'^ticket/$', TicketView, name = "ticket"),
-    url(r'^ticket/(?P<pk>[0-9]+)/$', TicketDetailsView, name="ticket_details"),
+    url(r'^ticket/(?P<pk>[0-9]+)/(?P<key>.+)/$', TicketDetailsView, name="ticket_details"),
     url(r'^agent/$', AgentView, name = "agent"),
     url(r'^agent/(?P<pk>[0-9]+)/$', AgentDetailsView, name="agent_details")
 }
