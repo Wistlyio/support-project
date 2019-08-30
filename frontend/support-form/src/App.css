@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.textbox {
+  width: 400px;
+}
+
+.inputbox {
+  width: 400px;
+}
+
+.login-form-button {
+  width: 400px;
+}
