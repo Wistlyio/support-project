@@ -9,7 +9,7 @@ from .models import Ticket, Agent
 MASTERKEY = 'password'
 
 @api_view(['GET', 'POST'])
-def TicketView(request):
+def TicketView(request, key):
 
     # check if key = MASTERKEY
     if KeyCheck(key) == False :
@@ -57,7 +57,7 @@ def TicketDetailsView(request, pk, key):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 @api_view(['GET', 'POST'])
-def AgentView(request):
+def AgentView(request, key):
 # check if key = MASTERKEY
     if KeyCheck(key) == False :
         messages = {
@@ -77,7 +77,7 @@ def AgentView(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def AgentDetailsView(request, pk):
+def AgentDetailsView(request, pk, key):
 # check if key = MASTERKEY
     if KeyCheck(key) == False :
         messages = {

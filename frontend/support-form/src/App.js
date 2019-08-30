@@ -19,7 +19,9 @@ class SupportForm extends Component {
   //IMPLEMENT AXIOS HERE
   handleSubmit = e => {
     console.log(this.state)
-    axios.get('https://cat.requestcatcher.com', this.state
+    axios.post('http://127.0.0.1:8000/ticket/password/', {
+      "email": this.state.email
+    }
     )
     .then(function (response) {
       console.log(response);
